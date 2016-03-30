@@ -1,0 +1,30 @@
+BaseURL: "https://yhikishima.github.io/"
+LanguageCode: "en-us"
+Title: "yhikishima's blog"
+
+Params:
+  Author: "yhikishima"
+  Birth: "1985/12/12"
+  DateForm: "2006/01/02"
+  Job: "FrontEnd Enginner, Unity Enginner"
+  GoogleAnalyticsUserID: "UA-68673100-1"
+  GravatarHash: "/"
+  Facebook: "yasuaki.hikishima"
+  # Twitter: "Your ID."
+  Github: "yhikishima"
+  # Disqus: "Your Disqus."
+  SyntaxHighlightTheme: "solarized_dark.min.css"
+  ShowRelatedPost: True
+  ShowTagCloud: True
+
+Indexes:
+  tag: "tags"
+  group: "groups"
+
+permalinks:
+  post: /blog/:year/:month/:day/:title/
+
+MetadataFormat: "yaml"
+
+LastChange:
+  Year: 2016
