@@ -7,11 +7,6 @@
 machine:
   timezone: Asia/Tokyo
 
-# dependencies:
-#   pre:
-#     - npm install -g bower
-    # - bower install
-
 dependencies:
   pre:
     - wget https://github.com/spf13/hugo/releases/download/v0.15/hugo_0.15_amd64.deb
@@ -28,3 +23,13 @@ test:
 #       - git config --global user.name "circleci"
 #       - git config --global user.email "circleci@feedforce.jp"
 #       - bundle exec middleman deploy
+
+deployment:
+  master:
+    branch: master
+    commands:
+      - git clone git@github.com:yhikishima/yhikishima.github.io.git public
+      - hugo --theme=theme_robust
+      - cd public && git add .
+      - cd public && git commit -m "[ci skip] publish"
+      - cd public && git push origin master
