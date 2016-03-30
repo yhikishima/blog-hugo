@@ -13,10 +13,6 @@ dependencies:
     - git config --global user.name "yhikishima"
     - git config --global user.email "lallapalooza1120@gmail.com"
 
-# test:
-#   override:
-#     - hugo --theme=theme_robust
-
 deployment:
   master:
     branch: master
@@ -26,3 +22,7 @@ deployment:
       - cd public && git add .
       - cd public && git commit -m "[ci skip] publish"
       - cd public && git push origin master
+
+test:
+  override:
+    - hugo --theme=theme_robust
