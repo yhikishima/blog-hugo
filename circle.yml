@@ -13,15 +13,15 @@ dependencies:
     - git config --global user.name "yhikishima"
     - git config --global user.email "lallapalooza1120@gmail.com"
 
-test:
-  override:
-    - hugo --theme=theme_robust
+# test:
+#   override:
+#     - hugo --theme=theme_robust
 
 deployment:
   master:
     branch: master
     commands:
-      - git clone git@github.com:yhikishima/yhikishima.github.io.git public
+      - git clone git@github.com:yhikishima/yhikishima.github.io.git
       - hugo --theme=theme_robust
       - cd public && git add .
       - cd public && git commit -m "[ci skip] publish"
