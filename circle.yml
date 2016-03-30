@@ -9,20 +9,13 @@ machine:
 
 dependencies:
   pre:
-    - wget https://github.com/spf13/hugo/releases/download/v0.15/hugo_0.15_amd64.deb
-    - sudo dpkg -i hugo_0.15_amd64.deb
+    - go get -v github.com/spf13/hugo
+    - git config --global user.name "yhikishima"
+    - git config --global user.email "lallapalooza1120@gmail.com"
 
 test:
   override:
     - hugo --theme=theme_robust
-
-# deployment:
-#   publish:
-#     branch: master
-#     commands:
-#       - git config --global user.name "circleci"
-#       - git config --global user.email "circleci@feedforce.jp"
-#       - bundle exec middleman deploy
 
 deployment:
   master:
