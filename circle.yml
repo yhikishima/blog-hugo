@@ -23,6 +23,7 @@ deployment:
       - cd public && git commit -m "[ci skip] publish"
       - cd public && git push origin master
 
-test:
-  override:
-    - hugo --theme=theme_robust
+# todo テストを追加する
+# test:
+#   override:
+#     - hugo --theme=theme_robust
