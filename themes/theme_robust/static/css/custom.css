@@ -115,3 +115,8 @@
   overflow: hidden;
   padding: 0 40px;
 }
+
+.post-title .font-smal {
+  font-size: 12px;
+  font-style: normal;
+}
