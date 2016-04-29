@@ -120,3 +120,15 @@
   font-size: 12px;
   font-style: normal;
 }
+
+/* icons */
+.icn {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  margin-left: 5px;
+}
+.icn.is-pray {
+  background: url(/images/pray.png) no-repeat;
+  background-size: 22px;
+}

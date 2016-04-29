@@ -1,4 +1,15 @@
 #!/bin/bash
+# タスクをストップした時に実行
+end_action () {
+
+  # hugo プロセス確認
+  ps aux | grep hugo | grep -v grep
+
+  # hugo プロセスkill
+  ps aux | grep hugo | grep -v grep | awk '{ print "kill -9", $2 }' | sh
+}
+
+
 if [ $1 = "dist" ]; then
   echo "
   =====================================
@@ -12,6 +23,7 @@ else
   watchをスタートします。
   =====================================
   "
+  trap end_action 2
   hugo server --watch --theme=theme_robust --buildDrafts&
   open http://localhost:1313/
 fi
