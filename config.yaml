@@ -16,6 +16,8 @@ Params:
   SyntaxHighlightTheme: "solarized_dark.min.css"
   ShowRelatedPost: True
   ShowTagCloud: True
+  Description: "WEBのフロントエンド、ゲーム、漫画、小説、映画などを書いていきます。"
+  Keywords: "WEB,FrontEnd,FrontEnginner,html,css,javascript,Unity,Game,Kindle,Manga,漫画,小説,映画"
 
 Indexes:
   tag: "tags"
