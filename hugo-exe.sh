@@ -9,7 +9,6 @@ end_action () {
   ps aux | grep hugo | grep -v grep | awk '{ print "kill -9", $2 }' | sh
 }
 
-
 if [ $1 = "dist" ]; then
   echo "
   =====================================
@@ -24,7 +23,7 @@ else
   =====================================
   "
   trap end_action 2
-  hugo server --watch --theme=theme_robust --buildDrafts&
   open http://localhost:1313/
+  hugo server --watch --theme=theme_robust --buildDrafts
 fi
 

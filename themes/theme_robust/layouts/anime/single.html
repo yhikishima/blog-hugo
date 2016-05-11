@@ -2,10 +2,10 @@
 <div class="row">
   <div class="col-md-9">
     <article id="posts">
-      <h2 class="title">{{ .Title }}<span class="title-summary">小説について紹介しています。</span></h2>
+      <h2 class="title">{{ .Title }}<span class="title-summary">アニメについて紹介しています。</span></h2>
 
       <div class="row">
-        {{ range .Site.Taxonomies.groups.novel.Pages }}
+        {{ range .Site.Taxonomies.groups.anime.Pages }}
         <div class="col-sm-12">
           <article>
             <a href="{{ .Permalink }}" class="post is-list">

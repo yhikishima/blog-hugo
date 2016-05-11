@@ -132,3 +132,8 @@
   background: url(/images/pray.png) no-repeat;
   background-size: 22px;
 }
+
+/* util */
+.util-block {
+  display: block !important;
+}

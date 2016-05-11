@@ -4,11 +4,24 @@
       <a href="{{ .Site.BaseURL }}" class="font-logo">{{ .Site.Title }}</a>
       <span>WEBのフロントエンド、ゲーム、漫画、小説などを書いていきます。</span>
     </h1>
-    <ul>
+    <ul class="header-right is-menu-list">
       <li><a href="{{ .Site.BaseURL }}">Home</a></li>
       <li><a href="{{ .Site.BaseURL }}engineer/">Engineer</a></li>
       <li><a href="{{ .Site.BaseURL }}mangaKindle/">Manga・Kindle</a></li>
       <li><a href="{{ .Site.BaseURL }}novel/">Novel</a></li>
+      <li><a href="{{ .Site.BaseURL }}anime/">Anime</a></li>
+      <li><a href="{{ .Site.BaseURL }}movie/">Movie</a></li>
     </ul>
+    <div class="header-right is-bars">
+      <i class="fa fa-bars" aria-hidden="true" id="header-right-bars"></i>
+      <ul>
+        <li><a href="{{ .Site.BaseURL }}">Home</a></li>
+        <li><a href="{{ .Site.BaseURL }}engineer/">Engineer</a></li>
+        <li><a href="{{ .Site.BaseURL }}mangaKindle/">Manga・Kindle</a></li>
+        <li><a href="{{ .Site.BaseURL }}novel/">Novel</a></li>
+        <li><a href="{{ .Site.BaseURL }}anime/">Anime</a></li>
+        <li><a href="{{ .Site.BaseURL }}movie/">Movie</a></li>
+      </ul>
+    </div>
   </div>
 </header>

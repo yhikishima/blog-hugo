@@ -33,6 +33,7 @@ li {
   width: 1170px;
   margin: 0 auto;
   padding: 0 15px;
+  position: relative;
 }
 
 .site-header h1 {
@@ -46,9 +47,9 @@ li {
 }
 
 .site-header h1 > span {
-  display: inline-block;
+  display: block;
   font-size: 12px;
-  margin-left: 10px;
+  margin-bottom: 12px;
   vertical-align: middle;
 }
 
@@ -63,16 +64,86 @@ li {
 .site-header a:hover {
   text-decoration: none;
 }
-.site-header ul {
+.site-header .header-right {
   float: right;
   display: table;
   margin: 0;
   padding-left: 0;
 }
 
-.site-header li {
+.site-header .header-right.is-menu-list li {
   display: table-cell;
   vertical-align: middle;
+}
+
+.site-header .header-right.is-bars {
+  display: none;
+  cursor: pointer;
+}
+
+.site-header .header-right.is-bars {
+  font-size: 20px;
+}
+
+.site-header .header-right.is-bars > i {
+  padding: 30px 20px 29px;
+  position: relative;
+}
+
+.site-header .header-right.is-bars > i.is-open {
+  color: #2ecc71;
+}
+
+.site-header .header-right.is-bars > i:hover {
+  color: #2ecc71;
+}
+.site-header .header-right.is-bars ul {
+  display: none;
+  padding: 15px 20px;
+  position: absolute;
+  top: 80px;
+  right: 0;
+  width: 170px;
+  background: #fff;
+  border-right: 1px solid #15a8ec;
+  border-bottom: 1px solid #15a8ec;
+  border-left: 1px solid #15a8ec;
+  z-index: -1;
+}
+
+.site-header .header-right.is-bars ul > li {
+  line-height: 2;
+  font-size: 18px;
+}
+
+.site-header .header-right.is-bars ul > li > a {
+  display: block;
+}
+
+@media (max-width: 460px) {
+  .site-header > .inner {
+    width: auto;
+    max-width: 463px;
+  }
+  .site-header h1 > span {
+    display: none;
+  }
+  .site-header h1 > a {
+    padding-top: 11px;
+  }
+  .site-header .header-right.is-bars > i {
+    padding: 20px;
+  }
+
+  .site-header .header-right.is-bars ul {
+    top: 61px;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-header > .inner {
+    width: 750px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -92,17 +163,23 @@ li {
 
 }
 @media (max-width: 1199px) {
-  .site-header h1 > span {
+/*  .site-header h1 > span {
+    display: none;
+  }*/
+  .site-header ul.header-right {
     display: none;
   }
+  .site-header .header-right.is-bars {
+    display: block;
+  }
 }
-.site-header ul > li > a {
+.site-header ul.header-right > li > a {
   display: block;
   text-align: center;
   font-size: 16px;
-  padding: 16px 20px;
+  padding: 30px 20px;
 }
-.site-header ul > li > a > span {
+.site-header ul.header-right > li > a > span {
   display: block;
   font-size: 10px;
 }
