@@ -7,7 +7,7 @@
       <div class="row">
         {{ range $index, $post := .Data.Pages }}
         {{ if eq .Type "post"}}
-        {{ if le $index 1 }}
+        {{ if le $index 3 }}
         <div class="col-sm-6">
           <article>
             <a href="{{ .Permalink }}" class="post post-topix">
