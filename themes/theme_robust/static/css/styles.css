@@ -99,7 +99,7 @@ li {
 }
 .site-header .header-right.is-bars ul {
   display: none;
-  padding: 15px 20px;
+  padding: 10px 20px;
   position: absolute;
   top: 80px;
   right: 0;
@@ -109,6 +109,7 @@ li {
   border-bottom: 1px solid #15a8ec;
   border-left: 1px solid #15a8ec;
   z-index: -1;
+  text-align: center;
 }
 
 .site-header .header-right.is-bars ul > li {
