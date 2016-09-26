@@ -9,7 +9,7 @@ end_action () {
   ps aux | grep hugo | grep -v grep | awk '{ print "kill -9", $2 }' | sh
 }
 
-if [ $1 = "dist" ]; then
+if [ "$1" == "dist" ]; then
   echo "
   =====================================
   distをスタートします。
