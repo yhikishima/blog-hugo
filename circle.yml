@@ -20,8 +20,8 @@ deployment:
       - git clone git@github.com:yhikishima/yhikishima.github.io.git public
       - hugo --theme=theme_robust
       - cd public && git add .
-      - cd public && git commit -m "publish [ci skip]"
-      - cd public && git push origin master
+      - git commit -m "publish [ci skip]"
+      - git push origin master
 
 # todo テストを追加する
 # test:
