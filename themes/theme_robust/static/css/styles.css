@@ -357,6 +357,7 @@ li {
 #post .content h1 {
   font-size: 3rem;
   border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
 }
 
 #post .content h2 {
